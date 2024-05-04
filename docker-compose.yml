@@ -1,0 +1,12 @@
+services:
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8501:8501
+    volumes:
+      - .:/home/app
+    environment:
+      PORT: 8501
